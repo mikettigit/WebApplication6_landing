@@ -1,0 +1,101 @@
+﻿<!DOCTYPE html>
+<!DOCTYPE html PUBLIC "" "">
+<html lang="en">
+<head>
+    
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Создание аналогов и копий любых действующих сайтов">
+    <title>Создание аналогов и копий сайтов - ReadyMade</title>
+
+    <link href="/Content/Styles/bootstrap.min.css" rel="stylesheet">
+    <link href="/Content/Styles/style.css" rel="stylesheet">
+    <link href="/Content/Styles/css.css" rel="stylesheet" type="text/css">
+    @*<link href="images/favicon.png" rel="shortcut icon">*@
+    
+    @*<script src="Scripts/pace.js"></script>*@
+    <script src="/Scripts/jquery.js" type="text/javascript"></script>
+    @*<script src="/Scripts/bootstrap.js" type="text/javascript"></script>*@
+    <script src="/Scripts/easing.js"></script>
+    <script src="/Scripts/requestform.js"></script>
+
+</head>
+<body>
+    @*div class="preloader"></div>*@
+    
+    @RenderBody()
+
+    <div class="container">
+        <section class="row breath footercontent">
+            <div class="col-sm-4">
+                <a class="social" href="http://twitter.com/surjithctly"
+                   target="_blank"><img alt="twitter" src="/Content/Img/twitter.png"></a>
+            </div>
+            <div class="col-sm-4 madeby">
+                <p>ReadyMade</p>
+            </div>
+            <div class="col-sm-4 copyinfo">
+                <p>© 2015 Themeforest</p>
+            </div>
+        </section>
+    </div>
+
+    <script>
+
+        function CustomAnimate()
+        {
+            $(".ScrollArrow").animate({ marginTop: 15, }, 250).animate({ marginTop: 0, }, 250).animate({ marginTop: 15, }, 250).animate({ marginTop: 0, }, 250);
+        }
+
+        $(document).ready(function () {
+            $('.scrollto, .gototop').bind('click', function (event) {
+                var $anchor = $(this);
+                $('html, body').stop().animate({
+                    scrollTop: $($anchor.attr('href')).offset().top
+                }, 1500, 'easeInOutExpo');
+                event.preventDefault();
+            });
+
+            CustomAnimate();
+
+            setInterval(function () {
+                CustomAnimate();
+            }, 4000);
+        });
+
+    </script>
+
+    <!-- Yandex.Metrika counter -->
+    <script type="text/javascript">
+        (function (d, w, c) {
+            (w[c] = w[c] || []).push(function () {
+                try {
+                    w.yaCounter33031304 = new Ya.Metrika({
+                        id: 33031304,
+                        clickmap: true,
+                        trackLinks: true,
+                        accurateTrackBounce: true
+                    });
+                } catch (e) { }
+            });
+
+            var n = d.getElementsByTagName("script")[0],
+                s = d.createElement("script"),
+                f = function () { n.parentNode.insertBefore(s, n); };
+            s.type = "text/javascript";
+            s.async = true;
+            s.src = "https://mc.yandex.ru/metrika/watch.js";
+
+            if (w.opera == "[object Opera]") {
+                d.addEventListener("DOMContentLoaded", f, false);
+            } else { f(); }
+        })(document, window, "yandex_metrika_callbacks");
+    </script>
+    <noscript><div><img src="https://mc.yandex.ru/watch/33031304" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
+    <!-- /Yandex.Metrika counter -->
+
+</body>
+</html>
+
+    
+ <!--<title>@ViewBag.Title - My ASP.NET Application</title>-->
