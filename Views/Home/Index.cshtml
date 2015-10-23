@@ -1,4 +1,4 @@
-﻿@{
+﻿﻿@{
     ViewBag.Title = "Home Page";
 }
 
@@ -33,7 +33,7 @@
                         <img class="pull-left" alt="tick" src="/Content/Img/tick.png">
                         <h5>Организация обмена с 1С</h5>
                         <p>
-                            Настройка полноценного обмена данными с 1С любой версии 
+                            Настройка полноценного обмена данными с 1С любой версии
                         </p>
                     </div>
                 </div>
@@ -43,7 +43,8 @@
                     <div class="signup-block">
                         <h3 class="form-title has-margin-bottom-sm text-center">ОБРАТНАЯ СВЯЗЬ</h3>
                         <form class="form" id="requestform">
-                            <div class="form-group"><label>Куда ответить</label> <input name="receiver" class="form-control input-lg" id="receiver" placeholder="Почта или телефон" value=""></div>
+                            <div class="form-group text-center" style="margin-top:-20px;"><a href="mailto:info@miketti.com">info@miketti.com</a></div>
+                            <div class="form-group"><label>Куда ответить</label> <input name="receiver" class="form-control input-lg" id="receiver" placeholder="Email" value=""></div>
                             <div class="form-group"><label>Текст</label> <textarea name="message" class="form-control input-lg" id="message" placeholder="Вопрос, пожелание, предложение..." rows="5" value=""></textarea></div>
                             <div class="form-group last"><input class="btn btn-warning btn-block btn-lg wpcf7-submit" type="button" value="ОТПРАВИТЬ"></div>
                             <p class="re-assure">Данные не будут использоваться для рассылок.</p>
@@ -60,16 +61,14 @@
 <div class="container">
     <div class="row">
         <div class="col-md-7 col-lg-6 col-lg-offset-1">
-            <div class="as-seen-on"> СМОТРИТЕ ТАКЖЕ </div>
+            <div class="as-seen-on"> СВЯЖИТЕСЬ ТАКЖЕ ЧЕРЕЗ </div>
             <div class="logos">
-                <img alt="logo" src="/Content/Img/logo_holder_3.png">
-                <img alt="logo" src="/Content/Img/logo_holder.png">
-                <img alt="logo" src="/Content/Img/logo_holder_2.png">
-                <img alt="logo" src="/Content/Img/logo_holder_3.png">
-                <img alt="logo" src="/Content/Img/logo_holder_2.png">
-                <img alt="logo" src="/Content/Img/logo_holder_3.png">
-                <img alt="logo" src="/Content/Img/logo_holder.png">
-                <img alt="logo" src="/Content/Img/logo_holder_3.png">
+                <a href="http://vk.com/miketti_readymade" target="_blank" title="Группа в контакте">
+                    <div class="logos_vk"></div>
+                </a>
+                <a href="skype:miketti.com" target="_blank" title="Контакт Skype">
+                    <div class="logos_skype"></div>
+                </a>
             </div>
         </div>
     </div>
@@ -256,6 +255,7 @@
         </section>
     </div>
 </div>
+
 <div class="container">
     <div class="section-title">
         <h2>Вы можете заказать</h2>
@@ -291,7 +291,7 @@
                 Кроме того
             </h6>
             <p>
-                - Реализация форм выбора, фильтров любой сложности c нуля и по образцу<br/>
+                - Реализация форм выбора, фильтров любой сложности c нуля и по образцу<br />
 
                 - Подключение сайта к базе данных другого сайта при переходе на новую версию без потери информации<br />
 
@@ -308,18 +308,34 @@
             </p>
         </div>
 
-              <div class="col-md-6" style="width:100%;">
-                  <h6>
-                      Есть другая задача?
-                  </h6>
-                  <p>
-                      Она тоже реализуема
-                  </p>
-              </div>
+        <div class="col-md-6" style="width:100%;">
+            <h6>
+                Есть другая задача?
+            </h6>
+            <p>
+                Она тоже реализуема
+            </p>
+        </div>
+
+    </section>
+
+    <section class="row faq breath">
+        <!-- Put this script tag to the <head> of your page -->
+        <script type="text/javascript" src="//vk.com/js/api/openapi.js?117"></script>
+
+        <script type="text/javascript">
+            VK.init({ apiId: 5102271, onlyWidgets: true });
+        </script>
+
+        <!-- Put this div tag to the place, where the Comments block will be -->
+        <div id="vk_comments"></div>
+        <script type="text/javascript">
+            VK.Widgets.Comments("vk_comments", { limit: 10, attach: "*" });
+        </script>
     </section>
 </div>
 
-<div class="highlight">
+@*<div class="highlight">
     <div class="container">
         <div class="section-title">
             <h2>Как происходит заказ</h2>
@@ -375,20 +391,18 @@
 
         </section>
     </div>
-</div>
+</div>*@
 
 <main class="footercta" role="main">
     <div class="container">
         <div class="section-title">
-            <h2>Есть вопросы?</h2>
+            <h2>Остались вопросы?</h2>
             <h4>задавайте</h4>
         </div>
         <div class="row">
             <div class="col-md-12 text-center">
-                <a class="btn btn-warning btn-lg gototop"
-                    href="http://demo.web3canvas.com/themeforest/readymade/default.html#top">
-                    GET
-                    INSTANT ACCESS
+                <a class="btn btn-warning btn-lg gototop" href="#top">
+                    ОБРАТНАЯ СВЯЗЬ
                 </a>
             </div>
         </div>

@@ -633,3 +633,17 @@ h5 {
 }
 
 .error {border: 1px solid #eb4848 !important; box-shadow: 0 0 10px #f00;}
+
+.logos_vk {
+    display:inline-block; margin: 10px 0 0 0; width: 64px; height: 56px; background: url(/content/img/vk.jpg) 0px 0px no-repeat; 
+}
+.logos_vk:hover {
+    background: url(/content/img/vk.jpg) -64px 0px no-repeat; 
+}
+
+.logos_skype {
+    display:inline-block; margin: 10px 0 0 20px; width: 100px; height: 56px; background: url(/content/img/skype.jpg) 0px 0px no-repeat; 
+}
+.logos_skype:hover {
+    background: url(/content/img/skype.jpg) -100px 0px no-repeat; 
+}
