@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Configuration;
+using System.IO;
 using System.Linq;
 using System.Net.Mail;
 using System.Web;
@@ -35,6 +36,7 @@ namespace WebApplication6_landing.Controllers
 
                 if (Convert.ToBoolean(ConfigurationManager.AppSettings["UseAgavaMail"]))
                 {
+                    //1
                     MailMessage mailObj = new MailMessage();
                     mailObj.From = new MailAddress(ConfigurationManager.AppSettings["messageFrom"]);
                     mailObj.To.Add(ConfigurationManager.AppSettings["messageTo"]);
@@ -43,6 +45,25 @@ namespace WebApplication6_landing.Controllers
 
                     SmtpClient SMTPServer = new SmtpClient("localhost");
                     SMTPServer.Send(mailObj);
+
+                    //2
+                    MailMessage mailObj2 = new MailMessage();
+                    mailObj2.From = new MailAddress(ConfigurationManager.AppSettings["messageFrom"]);
+                    mailObj2.To.Add(receiver);
+                    mailObj2.Subject = "Ваше сообщение, отправленное с сайта ReadyMade зарегистрировано";
+
+                    string filename = Server.MapPath("/Content/Templates/mail.htm");
+                    if (System.IO.File.Exists(filename))
+                    {
+                        using (StreamReader sr = new StreamReader(filename))
+                        {
+                            mailObj2.Body = sr.ReadToEnd();
+                            mailObj2.Body = mailObj2.Body.Replace("[%текст%]", message);
+                        };
+                        mailObj2.IsBodyHtml = true;
+
+                        SMTPServer.Send(mailObj2);
+                    }
                 }
                 else
                 {
