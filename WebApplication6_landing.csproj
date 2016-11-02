@@ -188,6 +188,7 @@
     <Content Include="Content\Styles\style.css" />
     <Content Include="favicon.ico" />
     <Content Include="Global.asax" />
+    <Content Include="Scripts\AB.js" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\contact_form.js" />
     <Content Include="Scripts\easing.js" />
