@@ -190,9 +190,9 @@
     <Content Include="Global.asax" />
     <Content Include="Scripts\AB.js" />
     <Content Include="Scripts\bootstrap.js" />
-    <Content Include="Scripts\contact_form.js" />
     <Content Include="Scripts\easing.js" />
     <Content Include="Scripts\jquery.js" />
+    <Content Include="Scripts\main.js" />
     <Content Include="Scripts\nicescroll.js" />
     <Content Include="Scripts\pace.js" />
     <Content Include="Scripts\requestform.js" />
