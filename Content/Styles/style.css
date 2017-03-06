@@ -647,3 +647,7 @@ h5 {
 .logos_skype:hover {
     background: url(/content/img/skype.jpg) -100px 0px no-repeat; 
 }
+
+.clientblock img {
+    max-height: 58px;
+}

@@ -7,6 +7,20 @@
             logo: "http://ros-zalog.ru/images/logo.png",
             type: "Сайт",
             name: "Росзалог"
+        },
+        {
+            sample: "http://www.kpkinvest.ru/",
+            result: "http://ros-zalog.ru/",
+            logo: "http://ros-zalog.ru/images/logo.png",
+            type: "Сайт2",
+            name: "Росзалог"
+        },
+        {
+            sample: "http://www.kpkinvest.ru/",
+            result: "http://ros-zalog.ru/",
+            logo: "http://ros-zalog.ru/images/logo.png",
+            type: "Сайт3",
+            name: "Росзалог"
         }
     ];
 
@@ -21,11 +35,28 @@
         instance.prependTo("#ready-projects");
         instance.show();
     }
+    $("#ready-projects .template").remove();
 
     $('#ready-projects').slick({
         infinite: true,
         slidesToShow: 3,
-        slidesToScroll: 1
+        slidesToScroll: 1,
+        responsive: [
+            {
+                breakpoint: 1024,
+                settings: {
+                    slidesToShow: 2,
+                    slidesToScroll: 1
+                }
+            },
+            {
+                breakpoint: 600,
+                settings: {
+                    slidesToShow: 1,
+                    slidesToScroll: 1
+                }
+            }
+        ]
     });
     $(".slick-slide img").css("display", "inline");
 
@@ -40,7 +71,7 @@
     } 
     $('.ready-project-item .testblock').equivalent();
     $(window).on("resize", function () {
-        $('.ready-project-item').equivalent();
+        $('.ready-project-item .testblock').equivalent();
     });
 
 })
