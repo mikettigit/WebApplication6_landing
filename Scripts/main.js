@@ -51,8 +51,8 @@
             name: "Комфорт-Cервис"
         },
         {
-            sample: "http://avksb.su/",
-            result: "http://ivideon.com",
+            sample: "http://ivideon.com",
+            result: "http://avksb.su/",
             logo: "http://avksb.su/images/logo-footer.png",
             type: "Копия дизайна и верстки",
             name: "АВК системы безопасности"
