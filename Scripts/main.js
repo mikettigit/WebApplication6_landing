@@ -58,17 +58,23 @@
             name: "АВК системы безопасности"
         }
     ];
-
+    
     for (var i = 0; i < ready_projects.length; i++) {
+
         var instance = $("#ready-projects .template").clone();
         instance.removeClass("template");
         instance.find(".ready-project-sample").attr("href", ready_projects[i].sample);
         instance.find(".ready-project-result").attr("href", ready_projects[i].result);
-        instance.find(".ready-project-logo").attr("src", ready_projects[i].logo);
+        instance.find(".ready-project-logo")
+            .attr("src", ready_projects[i].logo)
+            .load(function () {
+                $(this).parents(".ready-project-item").show();
+            });
         instance.find(".ready-project-type").html(ready_projects[i].type);
         instance.find(".ready-project-name").html(ready_projects[i].name);
         instance.appendTo("#ready-projects");
-        instance.show();
+        //instance.show();
+
     }
     $("#ready-projects .template").remove();
 
