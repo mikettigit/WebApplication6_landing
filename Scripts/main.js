@@ -59,25 +59,6 @@
         }
     ];
     
-    for (var i = 0; i < ready_projects.length; i++) {
-
-        var instance = $("#ready-projects .template").clone();
-        instance.removeClass("template");
-        instance.find(".ready-project-sample").attr("href", ready_projects[i].sample);
-        instance.find(".ready-project-result").attr("href", ready_projects[i].result);
-        instance.find(".ready-project-logo")
-            .attr("src", ready_projects[i].logo)
-            .load(function () {
-                $(this).parents(".ready-project-item").show();
-            });
-        instance.find(".ready-project-type").html(ready_projects[i].type);
-        instance.find(".ready-project-name").html(ready_projects[i].name);
-        instance.appendTo("#ready-projects");
-        //instance.show();
-
-    }
-    $("#ready-projects .template").remove();
-
     $('#ready-projects').slick({
         infinite: true,
         slidesToShow: 3,
@@ -99,7 +80,25 @@
             }
         ]
     });
-    $(".slick-slide img").css("display", "inline");
+
+    BaseItemsCount = $('#ready-projects .ready-project-item').length;
+    for (var i = 0 ; i < ready_projects.length; i++) {
+
+        var instance = $("#ready-projects-factory .template").clone();
+        instance.removeClass("template");
+        instance.find(".ready-project-sample").attr("href", ready_projects[i].sample);
+        instance.find(".ready-project-result").attr("href", ready_projects[i].result);
+        instance.find(".ready-project-type").html(ready_projects[i].type);
+        instance.find(".ready-project-name").html(ready_projects[i].name);
+        instance.appendTo("#ready-projects-factory");
+
+        var logo = instance.find(".ready-project-logo");
+        logo.attr("src", ready_projects[i].logo)
+        logo.load(function () {
+                $(this).off("load");
+                $('#ready-projects').slick("slickAdd", $(this).parents(".ready-project-item"));
+            });
+    }
 
     $.fn.equivalent = function (){ 
         var $blocks = $(this);
