@@ -2,6 +2,13 @@
     
     ready_projects = [
         {
+            sample: "",
+            result: "http://скрегион.рф/",
+            logo: "http://скрегион.рф/Content/img/logo.png",
+            type: "Сайт c нуля",
+            name: "Строительная компания Регион"
+        },
+        {
             sample: "http://www.kpkinvest.ru/",
             result: "http://ros-zalog.ru/",
             logo: "http://ros-zalog.ru/images/logo.png",
@@ -86,7 +93,12 @@
 
         var instance = $("#ready-projects-factory .template").clone();
         instance.removeClass("template");
-        instance.find(".ready-project-sample").attr("href", ready_projects[i].sample);
+        if (ready_projects[i].sample) {
+            instance.find(".ready-project-sample").attr("href", ready_projects[i].sample);
+        }
+        else {
+            instance.find(".ready-project-sample").remove();
+        }
         instance.find(".ready-project-result").attr("href", ready_projects[i].result);
         instance.find(".ready-project-type").html(ready_projects[i].type);
         instance.find(".ready-project-name").html(ready_projects[i].name);
