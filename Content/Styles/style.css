@@ -641,6 +641,13 @@ h5 {
     background: url(/content/img/vk.jpg) -64px 0px no-repeat; 
 }
 
+.logos_whatsapp {
+    display:inline-block; margin: 10px 0 0 0; width: 64px; height: 56px; background: url(/content/img/WhatsApp.jpg) 0px 0px no-repeat; 
+}
+.logos_whatsapp:hover {
+    background: url(/content/img/WhatsApp.jpg) -64px 0px no-repeat; 
+}
+
 .logos_skype {
     display:inline-block; margin: 10px 0 0 20px; width: 100px; height: 56px; background: url(/content/img/skype.jpg) 0px 0px no-repeat; 
 }

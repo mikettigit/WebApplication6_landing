@@ -9,25 +9,11 @@
             name: "Строительная компания Регион"
         },
         {
-            sample: "http://www.kpkinvest.ru/",
-            result: "http://ros-zalog.ru/",
-            logo: "http://ros-zalog.ru/images/logo.png",
-            type: "Сайт по образцу",
-            name: "Росзалог"
-        },
-        {
-            sample: "http://nashitulpany.ru ",
-            result: "http://ya-florist.ru/",
-            logo: "http://ya-florist.ru/img/logo.png",
-            type: "Копия лэндинга",
-            name: "Я флорист"
-        },
-        {
-            sample: "http://sinara.pro/",
-            result: "http://metallstoun.ru/",
-            logo: "http://metallstoun.ru/images/ikonki/logo.png",
-            type: "Копия сайта",
-            name: "Металлстоун"
+            sample: "",
+            result: "http://aw-s.ru/",
+            logo: "http://aw-s.ru/Content/img/logo.png",
+            type: "Экспресс-сайт за 2 часа к выставке",
+            name: "Автоматизированные водные системы"
         },
         {
             sample: "http://idl-implants.com/",
@@ -36,34 +22,6 @@
             type: "Cайт представительства в РФ",
             name: "IDL implants"
         },
-        {
-            sample: "http://mysanteh.ru/",
-            result: "http://теплок.рф/",
-            logo: "http://теплок.рф/content/images/857456963.png",
-            type: "Сайт по образцу",
-            name: "Теплосила"
-        },
-        {
-            sample: "http://msk-okna.com/",
-            result: "http://oknarasko.ru/",
-            logo: "http://oknarasko.ru/bitrix/templates/main/img/logo.png",
-            type: "Сайт по образцу",
-            name: "Окна Раско"
-        },
-        {
-            sample: "http://ремпластокна.рф/",
-            result: "http://oknaservice.pro/",
-            logo: "http://www.oknaservice.pro/images/logo.png",
-            type: "Копия лэндинга",
-            name: "Комфорт-Cервис"
-        },
-        {
-            sample: "http://ivideon.com",
-            result: "http://avksb.su/",
-            logo: "http://avksb.su/images/logo-footer.png",
-            type: "Копия дизайна и верстки",
-            name: "АВК системы безопасности"
-        }
     ];
     
     $('#ready-projects').slick({
