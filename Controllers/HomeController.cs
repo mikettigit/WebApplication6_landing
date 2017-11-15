@@ -17,6 +17,12 @@ namespace WebApplication6_landing.Controllers
             return View();
         }
 
+        public ActionResult Season(string id)
+        {
+            ViewBag.Season = id;
+            return View("~/Views/Home/Index.cshtml");
+        }
+
         [AcceptVerbs(HttpVerbs.Post)]
         public ActionResult Feedback(FormCollection collection)
         {

@@ -219,6 +219,9 @@
   <ItemGroup>
     <Content Include="packages.config" />
     <None Include="Project_Readme.html" />
+    <Content Include="Views\Shared\Seasons\Wrapper.cshtml" />
+    <Content Include="Views\Shared\Seasons\NY\banner.cshtml" />
+    <Content Include="Views\Shared\Seasons\NY\body.cshtml" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

@@ -22,6 +22,27 @@
             type: "Cайт представительства в РФ",
             name: "IDL implants"
         },
+        {
+            sample: "//legal-mos.ru/",
+            result: "//uk-mo.ru/",
+            logo: "//uk-mo.ru/css/images/logo.png",
+            type: "Копия сайта",
+            name: "ЮГ Судебная защита"
+        },
+        {
+            sample: "//kuhni.akmmos.ru/",
+            result: "//кухня-вашей-мечты.рф",
+            logo: "http://u0338974.plsk.regruhosting.ru/tild3130-3237-4664-b735-616438396438/dsc_9332jpg_56475d.jpg",
+            type: "Копия сайта",
+            name: "КУХНЯ Мечты"
+        },
+	{
+            sample: "//zaimchastniiinvestor.ru/",
+            result: "//sarzalog.ru",
+            logo: "//sarzalog.ru/img/logo.png",
+            type: "Копия сайта",
+            name: "Частный инвестор"
+        }
     ];
     
     $('#ready-projects').slick({

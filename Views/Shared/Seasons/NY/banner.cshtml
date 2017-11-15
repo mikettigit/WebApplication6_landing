@@ -1,0 +1,26 @@
+﻿<script>
+    $(document).ready(function(){
+        $("#season-banner").mouseover(function () {
+            $("#season-banner").animate({ right: -125, }, 250)
+        });
+        $("#season-banner").mouseout(function () {
+            $("#season-banner").animate({ right: -100, }, 250)
+        });
+        $("#season-banner a").click(function () {
+            $("#NY_body").show().height($(document).height())
+            return false;
+        })
+        if ($("#season_auto_popup").length > 0) {
+            $("#season-banner a").click();
+        }
+    })
+</script>
+
+<div style="position: absolute; top: 70px; right: -100px; z-index: 0;" class="visible-lg" id="season-banner">
+    <a href="#">
+        <img src="/Content/Img/seasons/NY/ny_banner1.png" />
+    </a>
+</div>
+
+
+

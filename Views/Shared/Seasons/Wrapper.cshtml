@@ -1,0 +1,18 @@
+﻿@using System.Configuration
+@{
+    string season = ViewBag.Season;
+    bool autopopup = true;
+    if (String.IsNullOrWhiteSpace(season)) { 
+        season = ConfigurationManager.AppSettings["season"];
+        autopopup = false;
+    }
+    string partialname = (string)Model;
+}
+
+@if (autopopup) { 
+    <input type="hidden" id="season_auto_popup" value="true" />
+}
+
+@if (!String.IsNullOrWhiteSpace(season)) {
+    @Html.Partial("Seasons/" + season + "/" + partialname)
+}
