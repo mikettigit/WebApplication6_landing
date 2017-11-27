@@ -9,10 +9,14 @@
     string partialname = (string)Model;
 }
 
-@if (autopopup) { 
-    <input type="hidden" id="season_auto_popup" value="true" />
-}
+<noindex>
+    @if (autopopup)
+    {
+        <input type="hidden" id="season_auto_popup" value="true" />
+    }
 
-@if (!String.IsNullOrWhiteSpace(season)) {
-    @Html.Partial("Seasons/" + season + "/" + partialname)
-}
+    @if (!String.IsNullOrWhiteSpace(season))
+    {
+        @Html.Partial("Seasons/" + season + "/" + partialname)
+    }
+</noindex>
