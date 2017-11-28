@@ -7,13 +7,15 @@
             $("#season-banner").animate({ right: -100, }, 250)
         });
         $("#season-banner a").click(function () {
-            $("#NY_body").show().height($(document).height())
+            SetShadowHeight($("#NY_body").show());
             return false;
-        })
-        if ($("#season_auto_popup").length > 0) {
-            $("#season-banner a").click();
-        }
+        });
+        SetShadowHeight($("#NY_body"));
     })
+
+    function SetShadowHeight(obj) {
+        obj.height($(document).height());
+    }
 </script>
 
 <div style="position: absolute; top: 70px; right: -100px; z-index: 0;" class="visible-lg" id="season-banner">

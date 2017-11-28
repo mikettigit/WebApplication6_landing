@@ -1,4 +1,8 @@
-﻿<script>
+﻿@{
+    bool autopopup = (bool)Model;
+}
+
+<script>
     $(document).ready(function() {
         $("#NY_body").click(function (e) {
                 if (e.target !== e.currentTarget) return;
@@ -12,7 +16,7 @@
     })
 </script>
 
-<div style="position: absolute; width: 100%; background: rgba(11, 197, 160, 0.9); margin: 0; padding: 0; z-index: 1001; display: none;" id="NY_body">
+<div style='position: absolute; width: 100%; background: rgba(11, 197, 160, 0.9); margin: 0; padding: 0; z-index: 1001; @((autopopup) ? "" : "display: none;")' id="NY_body">
     <!-- START BACKGROUND TABLE -->
     <table cellspacing="0" cellpadding="0" style="margin: auto; padding: 0;">
         <tr>

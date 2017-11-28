@@ -10,13 +10,8 @@
 }
 
 <noindex>
-    @if (autopopup)
-    {
-        <input type="hidden" id="season_auto_popup" value="true" />
-    }
-
     @if (!String.IsNullOrWhiteSpace(season))
     {
-        @Html.Partial("Seasons/" + season + "/" + partialname)
+        @Html.Partial("Seasons/" + season + "/" + partialname, autopopup)
     }
 </noindex>
