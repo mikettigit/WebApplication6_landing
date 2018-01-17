@@ -1,4 +1,11 @@
 ﻿$(document).ready(function () {
+
+    $(".form-group input,.form-group textarea").on("change paste keyup", function () {
+        $(".wpcf7-submit")
+            .addClass("btn-warning")
+            .val("ОТПРАВИТЬ");
+    });
+
     $(".wpcf7-submit").click(function () {
 
         isError = false;
@@ -82,7 +89,10 @@
             $.post('/Home/Feedback',
             {
                 receiver: receiverString,
-                message: messageString
+                message: messageString,
+                source: $("#requestform").find("[name=source]").val(),
+                budget: $("#requestform").find("[name=budget]").val(),
+                domain: $("#requestform").find("[name=domain]").val()
             },
             function (data) {
                 alert(data.Message);

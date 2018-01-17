@@ -105,4 +105,18 @@
         $('.ready-project-item .testblock').equivalent();
     });
 
+
+    $(".re-assure2").click(function () {
+        if (!$(this).hasClass("expand")) {
+            $(this).addClass("expand");
+            $(this).find("span").html("&#8863;");
+            $(".form-group.add").show();
+        }
+        else {
+            $(this).removeClass("expand");
+            $(this).find("span").html("&#8862;");
+            $(".form-group.add").hide();
+        }
+    })
+
 })

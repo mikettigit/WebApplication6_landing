@@ -39,6 +39,21 @@ namespace WebApplication6_landing.Controllers
                 {
                     body += "Сообщение: " + message + "\n";
                 }
+                string source = collection["source"];
+                if (!String.IsNullOrWhiteSpace(source))
+                {
+                    body += "Сайт-образец: " + source + "\n";
+                }
+                string budget = collection["budget"];
+                if (!String.IsNullOrWhiteSpace(budget))
+                {
+                    body += "Бюджет: " + budget + "\n";
+                }
+                string domain = collection["domain"];
+                if (!String.IsNullOrWhiteSpace(domain))
+                {
+                    body += "Свой домен: " + domain + "\n";
+                }
 
                 if (Convert.ToBoolean(ConfigurationManager.AppSettings["UseAgavaMail"]))
                 {

@@ -86,7 +86,10 @@ a:focus {
 	margin: 10px;
 }
 .re-assure {
-	text-align: center; color: rgb(170, 170, 170); font-size: 11px; font-style: italic; margin-top: 15px; margin-bottom: 0px;
+	text-align: center; color: rgb(170, 170, 170); font-size: 11px; margin-top: 15px; margin-bottom: 0px;
+}
+.re-assure2 {
+	cursor: pointer;
 }
 .has-margin-top {
 	margin-top: 30px;
