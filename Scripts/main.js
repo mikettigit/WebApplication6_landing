@@ -3,45 +3,45 @@
     ready_projects = [
         {
             sample: "",
-            result: "http://скрегион.рф/",
-            logo: "http://скрегион.рф/Content/img/logo.png",
-            type: "Сайт c нуля",
-            name: "Строительная компания Регион"
-        },
-        {
-            sample: "",
             result: "http://aw-s.ru/",
             logo: "http://aw-s.ru/Content/img/logo.png",
             type: "Экспресс-сайт за 2 часа к выставке",
             name: "Автоматизированные водные системы"
         },
         {
-            sample: "http://idl-implants.com/",
-            result: "http://idl-implants.ru/",
-            logo: "http://idl-implants.ru/wp-content/uploads/2015/07/logoIDL.png",
-            type: "Cайт представительства в РФ",
-            name: "IDL implants"
+            sample: "http://archive.li/0wQGu",
+            result: "http://stofitness.ru/",
+            logo: "http://stofitness.ru/wp-content/themes/autopress/assets/images/tmp/logo2.png",
+            type: "Сайт c нуля",
+            name: "СТО самообслуживания АвтоФитнес ПЛЮС"
         },
         {
-            sample: "//legal-mos.ru/",
+            sample: "http://archive.li/51sS4",
+            result: "http://rstop.ru/",
+            logo: "http://rstop.ru/wp-content/uploads/2017/01/logo-dark.png",
+            type: "Сайт c нуля",
+            name: "РемСпецТех"
+        },
+        {
+            sample: "http://archive.li/1Gd1I",
             result: "//uk-mo.ru/",
             logo: "//uk-mo.ru/css/images/logo.png",
             type: "Копия сайта",
             name: "ЮГ Судебная защита"
         },
         {
-            sample: "//kuhni.akmmos.ru/",
-            result: "//кухня-вашей-мечты.рф",
-            logo: "http://u0338974.plsk.regruhosting.ru/tild3130-3237-4664-b735-616438396438/dsc_9332jpg_56475d.jpg",
+            sample: "http://archive.li/zEQwC",
+            result: "//advokat-lazareva.ru",
+            logo: "http://advokat-lazareva.ru/templates/_shablon/images/logo.png",
             type: "Копия сайта",
-            name: "КУХНЯ Мечты"
+            name: "Адвокат Лазарева В.А."
         },
-	{
-            sample: "//zaimchastniiinvestor.ru/",
-            result: "//sarzalog.ru",
-            logo: "//sarzalog.ru/img/logo.png",
+        {
+            sample: "http://archive.li/HoGts",
+            result: "//molbulal.ru/",
+            logo: "http://molbulal.ru/CONTENT/first.png",
             type: "Копия сайта",
-            name: "Частный инвестор"
+            name: "Микрофинансы Мол Булал"
         }
     ];
     

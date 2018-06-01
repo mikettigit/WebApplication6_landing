@@ -33,26 +33,26 @@ namespace WebApplication6_landing.Controllers
             {
                 string receiver = collection["receiver"];
                 string message = collection["message"];
-                string body = "Куда ответить: " + receiver + "\n";
+                string body = "";// "Куда ответить: " + receiver + "\n";
                 string subject = "Запрос";
                 if (message != null)
                 {
-                    body += "Сообщение: " + message + "\n";
+                    body += "Сообщение: " + message + "<br/>";
                 }
                 string source = collection["source"];
                 if (!String.IsNullOrWhiteSpace(source))
                 {
-                    body += "Сайт-образец: " + source + "\n";
+                    body += "Сайт-образец: " + source + "<br/>";
                 }
                 string budget = collection["budget"];
                 if (!String.IsNullOrWhiteSpace(budget))
                 {
-                    body += "Бюджет: " + budget + "\n";
+                    body += "Бюджет: " + budget + "<br/>";
                 }
                 string domain = collection["domain"];
                 if (!String.IsNullOrWhiteSpace(domain))
                 {
-                    body += "Свой домен: " + domain + "\n";
+                    body += "Свой домен: " + domain + "<br/>";
                 }
 
                 if (Convert.ToBoolean(ConfigurationManager.AppSettings["UseAgavaMail"]))
@@ -80,7 +80,7 @@ namespace WebApplication6_landing.Controllers
                         using (StreamReader sr = new StreamReader(filename))
                         {
                             mailObj2.Body = sr.ReadToEnd();
-                            mailObj2.Body = mailObj2.Body.Replace("[%текст%]", message);
+                            mailObj2.Body = mailObj2.Body.Replace("[%текст%]", body);
                         };
                         mailObj2.IsBodyHtml = true;
                         SMTPServer.Send(mailObj2);
