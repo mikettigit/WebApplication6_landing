@@ -72,7 +72,7 @@ namespace WebApplication6_landing.Controllers
                     mailObj2.From = new MailAddress(ConfigurationManager.AppSettings["messageFrom"]);
                     mailObj2.To.Add(receiver);
                     mailObj2.Bcc.Add(ConfigurationManager.AppSettings["messageTo"]);
-                    mailObj2.Subject = "Ваше сообщение, отправленное с сайта ReadyMade зарегистрировано";
+                    mailObj2.Subject = "Ваше сообщение, отправленное с сайта " + Request.Url.Authority + " зарегистрировано";
 
                     string filename = Server.MapPath("/Content/Templates/mail.htm");
                     if (System.IO.File.Exists(filename))
